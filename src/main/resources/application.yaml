@@ -3,19 +3,10 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/user-service?createDatabaseIfNotExist=true&serverTimezone=UTC
+    url: jdbc:postgresql://localhost:5432/user-api?createDatabaseIfNotExist=true&serverTimezone=UTC
     username: postgres
     password: admin 
     driver-class-name: org.postgresql.Driver
-    
-  rabbitmq:
-    host: chimpanzee.rmq.cloudamqp.com
-    port: 5672
-    username: guiipcih
-    password: rmi0aARlI9gqXyW1t0sZ6nmyS0jXF50M
-    virtual-host: guiipcih
-    ssl:
-      enabled: false
   
   jpa:
     hibernate:
