@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DepartmentListener {
-    @RabbitListener(queues = "department-user")
-    public void onDepartmentCreated(DepartmentModel departmentModel) {
-        System.out.println("departamento recebido:" + departmentModel.getNome());
-    }
+//    @RabbitListener(queues = "department-user")
+//    public void onDepartmentCreated(DepartmentModel departmentModel) {
+//        System.out.println("departamento recebido:" + departmentModel.getNome());
+//    }
 }

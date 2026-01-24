@@ -10,14 +10,14 @@ spring:
     password: admin 
     driver-class-name: org.postgresql.Driver
     
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-    virtual-host: /
-    ssl:
-      enabled: false
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#    virtual-host: /
+#    ssl:
+#      enabled: false
   
   jpa:
     hibernate:

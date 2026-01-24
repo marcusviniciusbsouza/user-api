@@ -13,8 +13,8 @@ import com.br.infrastructure.externalservice.rest.department.DepartmentFeignClie
 import com.br.infrastructure.externalservice.rest.department.mapper.DepartmentModelMapper;
 import com.br.infrastructure.externalservice.rest.department.model.Department;
 
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
+//import org.springframework.amqp.core.Message;
+//import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -57,8 +57,8 @@ public class UserController {
 	@Autowired
 	private DepartmentModelMapper departmentModelMapper;
 	
-	@Autowired
-	private RabbitTemplate rabbitTemplate;
+//	@Autowired
+//	private RabbitTemplate rabbitTemplate;
 	
 	@ApiOperation("Retorna uma lista de usuários.")
     @ApiResponses({
@@ -111,7 +111,7 @@ public class UserController {
 		User user = userModelMapperBack.toModel(userModelInput);
 		UserModel userModel = userModelMapper.toModel(userService.save(user));
 
-		rabbitTemplate.convertAndSend("user-document", userModel);
+//		rabbitTemplate.convertAndSend("user-document", userModel);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(userModel);
 	}

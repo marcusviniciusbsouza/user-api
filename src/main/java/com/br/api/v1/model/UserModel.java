@@ -9,7 +9,6 @@ import java.util.UUID;
 public class UserModel {
 
 	private String nome;
-	private Boolean active;
     private UUID userId;
 	private String matricula;
 	private String email;
