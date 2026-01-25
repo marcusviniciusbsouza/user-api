@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import com.br.infrastructure.externalservice.rest.department.model.Department;
 
 @Component
-@FeignClient(value = "root", url = "http://localhost:8081/v1/department")
+@FeignClient(value = "root", url = "http://localhost:8081/department/v1")
 public interface DepartmentFeignClient {
 
-	@RequestMapping(method = RequestMethod.GET, value = "/buscar/{id}")
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
 	Department getDepartment(@PathVariable("id") UUID id);
 	
 }
